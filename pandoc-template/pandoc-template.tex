@@ -1,0 +1,94 @@
+%  run command: pandoc input.md -o output.pdf --template pandoc-template.tex --pdf-engine=xelatex
+\documentclass[11pt, letterpaper]{article}
+
+% --- Margins  ---
+\usepackage[margin=1in]{geometry}
+
+% --- Packages for enhanced styling ---
+\usepackage{xcolor}        % For defining and using colors
+\usepackage{titling}       % For precise control over the title block
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+
+% --- Font Settings (Requires xelatex or lualatex) ---
+\usepackage{fontspec}
+\setmainfont{Inter} % Set a font that is instaled in your system
+\setsansfont{Inter}
+
+% ----------------------------------------------------
+% LINE COUNTER SETUP
+\usepackage{lineno}        % Load the line numbering package
+
+% Configuration to place the number on the right, not the default left
+\leftlinenumbers           % Ensure numbering starts from the left (default)
+\linenumberdisplaymath     % Number lines in display math mode
+
+% Define the format to move the number to the right
+\setlength\linenumbersep{1em} % Adjust spacing between number and text
+\def\linenumbf#1{{\normalfont\sffamily\scriptsize\llap{#1\hskip\linenumbersep}}}
+\def\linenumberfont{\linenumbf} % Apply the new formatting
+
+\nolinenumbers % Turn off numbering initially (we'll turn it on later)
+
+
+% ----------------------------------------------------
+% PRETTY TITLE & AUTHOR SETUP
+
+% Define a custom color for the main title (e.g., a dark slate blue)
+\definecolor{TitleColor}{HTML}{5C2C00}
+\definecolor{AuthorColor}{HTML}{8D857F} % Light gray for author/date
+
+% Redefine the title section using titling package commands
+\pretitle{\begin{center}\Huge\bfseries\color{TitleColor}\linespread{1.2}}
+\posttitle{\par\end{center}\vskip 0.5em}
+
+\preauthor{\begin{center}\large\color{AuthorColor}}
+\postauthor{\par\end{center}\vskip 1em}
+
+\predate{\begin{center}\small\color{AuthorColor}}
+\postdate{\par\end{center}\vskip 2em}
+
+% ----------------------------------------------------
+% CUSTOM HEADER AND FOOTER SETUP
+%
+% --- Headers/Footers (Optional, but often needed for style) ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{} % Clear existing header/footer fields
+
+% Header Definition
+\fancyhead[L]{\bfseries \color{TitleColor} $title$}
+\fancyhead[R]{\itshape \color{AuthorColor} $date$}
+
+% Footer Definition
+\fancyfoot[L]{\small\itshape $author$}
+\fancyfoot[R]{\thepage}
+
+% Add thin lines above the footer and below the header
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+% ----------------------------------------------------
+
+% --- Hyperlink Colors ---
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+
+% --- Document Starts Here ---
+\title{$title$}
+\author{$author$}
+\date{$date$}
+
+\begin{document}
+
+\maketitle
+
+% Optional: Include Table of Contents if needed
+$if(toc)$
+\tableofcontents
+\newpage % Start the content on a new page
+$endif$
+
+\linenumbers % Line numeration
+
+$body$
+
+\end{document}

@@ -6,7 +6,9 @@ return {
             -- Configure KNAP settings
             vim.g.knap_settings = {
                 mdoutputext = "pdf",
-                mdtopdf = "pandoc -o %outputfile% --pdf-engine=xelatex",
+                --mdtopdf = "pandoc -o %outputfile% --pdf-engine=xelatex",
+                mdtopdf =
+                "pandoc -o %outputfile% --template $HOME/.config/nvim/pandoc-template/pandoc-template.tex --pdf-engine=xelatex",
                 mdtopdfviewerlaunch = "zathura %outputfile%",
                 mdtopdfviewerrefresh = "none",
                 mdtopdfbufferasstdin = true,
