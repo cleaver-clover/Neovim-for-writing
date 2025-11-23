@@ -17,7 +17,12 @@ vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Delete char to blackhole regi
 -- Spell check commands
 vim.keymap.set("n", "<leader>s<Left>", "[s", { desc = "Go to previous search match/error" })
 vim.keymap.set("n", "<leader>s<Right>", "]s", { desc = "Go to next search match/error" })
-vim.keymap.set("n", "<leader>ss", "z=", { desc = "Suggest spelling corrections" })
+-- vim.keymap.set("n", "<leader>ss", "z=", { desc = "Suggest spelling corrections" })
+vim.keymap.set("n", "<leader>ss", function()
+    require("telescope.builtin").spell_suggest(require('telescope.themes').get_cursor({}))
+end, { desc = "Telescope spell suggestions" })
+
+
 vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to dictionary" })
 vim.keymap.set("n", "<leader>sr", "zug", { desc = "Remove word from dictionary" })
 vim.keymap.set("n", "<leader>sb", "zw", { desc = "Add bad word to dictionary" })
