@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Remove bad word from diction
 
 -- git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "git view changes" })
-vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "view who chanded current line" })
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "view who chanded current line" })
 
 -- Neotree commands
 vim.keymap.set(
