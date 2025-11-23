@@ -6,6 +6,9 @@ return {
 		end,
 	},
 	{
+		"tpope/vim-fugitive",
+	},
+	{
 		"OXY2DEV/markview.nvim",
 	},
 	{

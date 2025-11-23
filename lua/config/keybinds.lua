@@ -14,6 +14,19 @@ vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Delete to blackhole register" })
 vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Delete char to blackhole register" })
 
+-- Spell check commands
+vim.keymap.set("n", "<leader>s<Left>", "[s", { desc = "Go to previous search match/error" })
+vim.keymap.set("n", "<leader>s<Right>", "]s", { desc = "Go to next search match/error" })
+vim.keymap.set("n", "<leader>ss", "z=", { desc = "Suggest spelling corrections" })
+vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to dictionary" })
+vim.keymap.set("n", "<leader>sr", "zug", { desc = "Remove word from dictionary" })
+vim.keymap.set("n", "<leader>sb", "zw", { desc = "Add bad word to dictionary" })
+vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Remove bad word from dictionary" })
+
+-- git
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "git view changes" })
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "view who chanded current line" })
+
 -- Neotree commands
 vim.keymap.set(
 	{ "n", "v" },
@@ -31,5 +44,15 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code a
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "LSP: Code format" })
 
 -- Latex make short cuts
-vim.api.nvim_set_keymap('n', '<leader>tm', ':!sh ./Compile.sh<CR>', { desc = "Make LaTeX project by executing Compile.sh" })
-vim.api.nvim_set_keymap('n', '<leader>to', ':silent !ls *.pdf | xargs zathura &<CR>', { desc = "Open latex pdf with zathura" })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>tm",
+	":!sh ./Compile.sh<CR>",
+	{ desc = "Make LaTeX project by executing Compile.sh" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>to",
+	":silent !ls *.pdf | xargs zathura &<CR>",
+	{ desc = "Open latex pdf with zathura" }
+)
