@@ -22,6 +22,9 @@ vim.keymap.set("n", "<leader>ss", function()
     require("telescope.builtin").spell_suggest(require('telescope.themes').get_cursor({}))
 end, { desc = "Telescope spell suggestions" })
 
+-- Buffer switch
+vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Change buffer" })
+
 
 vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to dictionary" })
 vim.keymap.set("n", "<leader>sr", "zug", { desc = "Remove word from dictionary" })
