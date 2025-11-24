@@ -31,7 +31,7 @@ vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Remove bad word from diction
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Change visible buffer" })
 vim.keymap.set("n", "<leader>bk", ":bnext<CR>", { desc = "Change next buffer" })
 vim.keymap.set("n", "<leader>bj", ":bprevious<CR>", { desc = "Change previous buffer" })
-vim.keymap.set("n", "<leader>bq", ":bdelete", { desc = "Current buffer close" })
+vim.keymap.set("n", "<leader>bq", ":bdelete<CR>", { desc = "Current buffer close" })
 
 -- git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "git view changes" })
