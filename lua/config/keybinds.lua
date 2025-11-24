@@ -56,13 +56,13 @@ vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "LSP: Code format
 -- Latex make short cuts
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>tm",
+	"<leader>lc",
 	":!sh ./Compile.sh<CR>",
 	{ desc = "Make LaTeX project by executing Compile.sh" }
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>to",
+	"<leader>lo",
 	":silent !ls *.pdf | xargs zathura &<CR>",
 	{ desc = "Open latex pdf with zathura" }
 )
