@@ -25,10 +25,10 @@ vim.keymap.set("n", "<leader>ss", function()
 	require("telescope.builtin").spell_suggest(require("telescope.themes").get_cursor({}))
 end, { desc = "Telescope spell suggestions" })
 
-vim.keymap.set("n", "<leader>sa", "zg", { desc = "Sepll: Add word to dictionary" })
-vim.keymap.set("n", "<leader>sr", "zug", { desc = "Sepll: Remove word from dictionary" })
-vim.keymap.set("n", "<leader>sb", "zw", { desc = "Sepll: Add bad word to dictionary" })
-vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Sepll: Remove bad word from dictionary" })
+vim.keymap.set("n", "<leader>sa", "zg", { desc = "Spell: Add word to dictionary" })
+vim.keymap.set("n", "<leader>sr", "zug", { desc = "Spell: Remove word from dictionary" })
+vim.keymap.set("n", "<leader>sb", "zw", { desc = "Spell: Add bad word to dictionary" })
+vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Spell: Remove bad word from dictionary" })
 
 -- Buffer commands
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Buffer: Change visible buffer" })
