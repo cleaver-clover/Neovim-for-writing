@@ -22,14 +22,16 @@ vim.keymap.set("n", "<leader>ss", function()
     require("telescope.builtin").spell_suggest(require('telescope.themes').get_cursor({}))
 end, { desc = "Telescope spell suggestions" })
 
--- Buffer switch
-vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Change buffer" })
-
-
 vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to dictionary" })
 vim.keymap.set("n", "<leader>sr", "zug", { desc = "Remove word from dictionary" })
 vim.keymap.set("n", "<leader>sb", "zw", { desc = "Add bad word to dictionary" })
 vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Remove bad word from dictionary" })
+
+-- Buffer commands
+vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Change visible buffer" })
+vim.keymap.set("n", "<leader>bk", ":bnext<CR>", { desc = "Change next buffer" })
+vim.keymap.set("n", "<leader>bj", ":bprevious<CR>", { desc = "Change previous buffer" })
+vim.keymap.set("n", "<leader>bq", ":bdelete", { desc = "Current buffer close" })
 
 -- git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "git view changes" })
