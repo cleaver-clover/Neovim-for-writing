@@ -58,7 +58,7 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "LSP: Hover to get help" })
 vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "LSP: Defenition" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code action" })
-vim.keymap.set("n", "<leader>cc", ":!sh ./compile.sh", { desc = "compile project with compile.sh" })
+vim.keymap.set("n", "<leader>cc", ":!sh ./compile.sh<CR>", { desc = "compile project with compile.sh" })
 
 -- Formating
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "LSP: Code format" })
