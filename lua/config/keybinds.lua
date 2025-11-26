@@ -38,7 +38,12 @@ vim.keymap.set("n", "<leader>bq", ":bdelete<CR>", { desc = "Buffer: Close curren
 
 -- git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", { desc = "Git view changes" })
-vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git blame current line changes" })
+vim.keymap.set(
+	"n",
+	"<leader>gb",
+	":Gitsigns toggle_current_line_blame<CR>",
+	{ desc = "Git blame current line changes" }
+)
 vim.keymap.set("n", "<leader>gs", ":Git status<CR>", { desc = "Git status" })
 
 -- Neotree commands
@@ -53,17 +58,12 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "LSP: Hover to get help" })
 vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "LSP: Defenition" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code action" })
+vim.keymap.set("n", "<leader>cc", ":!sh ./compile.sh", { desc = "compile project with compile.sh" })
 
 -- Formating
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "LSP: Code format" })
 
 -- Latex make short cuts
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>lc",
-	":!sh ./Compile.sh<CR>",
-	{ desc = "LaTeX: Compile project with Compile.sh" }
-)
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>lo",
