@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>bj", ":bprevious<CR>", { desc = "Buffer: Change to 
 vim.keymap.set("n", "<leader>bq", ":bdelete<CR>", { desc = "Buffer: Close current buffer" })
 
 -- git
-vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git view changes" })
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", { desc = "Git view changes" })
 vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git blame current line changes" })
 vim.keymap.set("n", "<leader>gs", ":Git status<CR>", { desc = "Git status" })
 
