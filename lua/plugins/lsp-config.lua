@@ -9,7 +9,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "stylua", "pylsp", "texlab" },
+			ensure_installed = { "lua_ls", "stylua", "pylsp", "texlab", "rust_analyzer", "pyright" },
 		},
 		dependencies = {
 			"mason-org/mason.nvim",

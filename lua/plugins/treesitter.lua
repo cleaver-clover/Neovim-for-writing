@@ -11,7 +11,18 @@ return {
 				-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
 				auto_install = false,
 
-				ensure_installed = { "lua", "markdown", "markdown_inline" },
+				ensure_installed = {
+					"lua",
+					"markdown",
+					"markdown_inline",
+					"typescript",
+					"javascript",
+					"html",
+					"css",
+					"svelte",
+					"rust",
+					"python"
+				},
 				highlight = { enable = true },
 				indent = { enable = true },
 
