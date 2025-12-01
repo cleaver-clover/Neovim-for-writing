@@ -1,4 +1,6 @@
 %  run command: pandoc input.md -o output.pdf --template pandoc-template.tex --pdf-engine=xelatex
+% When creating tables or lists. If a line is too big it will create an error.
+
 \documentclass[11pt, letterpaper]{article}
 
 % --- Margins  ---
@@ -13,6 +15,15 @@
 \usepackage{fontspec}
 \setmainfont{Inter} % Set a font that is instaled in your system
 \setsansfont{Inter}
+
+% --- To render tables ---
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Fix for tightlist error
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % ----------------------------------------------------
 % LINE COUNTER SETUP
@@ -51,6 +62,7 @@
 % CUSTOM HEADER AND FOOTER SETUP
 %
 % --- Headers/Footers (Optional, but often needed for style) ---
+\usepackage{booktabs}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -87,7 +99,8 @@ $if(toc)$
 \newpage % Start the content on a new page
 $endif$
 
-\linenumbers % Line numeration
+% Line numeration
+\linenumbers 
 
 $body$
 
