@@ -3,6 +3,7 @@ title: "My Creative Ideas and Thoughts"
 author: "The Thinker"
 date: \today
 
+linenumeration: true
 toc: false
 ---
 

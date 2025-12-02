@@ -1,31 +1,25 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		opts = {},
-		config = function()
-			require("mason").setup()
-		end,
+		opts = {
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+		},
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = {
-			ensure_installed = { "lua_ls", "stylua", "pylsp", "texlab", "rust_analyzer", "pyright" },
-		},
 		dependencies = {
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
 		},
-		config = function()
-			require("mason").setup({
-				ui = {
-					icons = {
-						package_installed = "✓",
-						package_pending = "➜",
-						package_uninstalled = "✗",
-					},
-				},
-			})
-		end,
+		opts = {
+			ensure_installed = { "lua_ls", "stylua", "pylsp", "texlab", "rust_analyzer", "pyright" },
+		},
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
