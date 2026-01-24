@@ -70,3 +70,9 @@ vim.api.nvim_set_keymap(
 	":silent !ls *.pdf | xargs zathura &<CR>",
 	{ desc = "LaTeX: Open pdf with zathura" }
 )
+
+-- Open Kitty in Neovim's current working directory (cwd)
+vim.keymap.set('n', '<leader>T', function()
+    local dir = vim.fn.getcwd()
+    vim.fn.jobstart({'kitty', '--directory', dir}, {detach = true})
+end, { desc = 'Open Kitty in Neovim current working directory' })
