@@ -31,7 +31,7 @@ vim.keymap.set("n", "<leader>sb", "zw", { desc = "Spell: Add bad word to diction
 vim.keymap.set("n", "<leader>sbr", "zuw", { desc = "Spell: Remove bad word from dictionary" })
 
 -- Buffer commands
-vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Buffer: Change visible buffer" })
+vim.keymap.set("n", "<leader>w", "<C-w>p", { desc = "Buffer: Change to previous window (Neotree)" })
 vim.keymap.set("n", "<leader>bk", ":bnext<CR>", { desc = "Buffer: Change to next buffer" })
 vim.keymap.set("n", "<leader>bj", ":bprevious<CR>", { desc = "Buffer: Change to previous buffer" })
 vim.keymap.set("n", "<leader>bq", ":bdelete<CR>", { desc = "Buffer: Close current buffer" })
