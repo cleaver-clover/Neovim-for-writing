@@ -6,5 +6,5 @@ For theming it grabs colors from the [pywal](https://github.com/dylanaraps/pywal
 
 **Dependencies:**
 For the markdown preview `zathura`, `zathura-pdf-poppler` and `pandoc` need to be installed.
-
+For Telescope: `ripgrep`  
  
