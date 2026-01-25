@@ -252,9 +252,9 @@ return {
 						{
 							icon = "",
 							icon_hl = "GitSignsAdd",
-							desc = "Bookmarks",
+							desc = "Projects",
 							desc_hl = "Text",
-							key = "b",
+							key = "p",
 							key_hl = "GitSignsAdd",
 							action = "Telescope projects",
 						},
